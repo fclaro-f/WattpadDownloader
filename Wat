@@ -1,0 +1,6 @@
+git clone https://github.com/TheOnlyWayUp/WattpadDownloader/ && cd WattpadDownloader
+docker build . -t 'wp_downloader'
+docker run -d -p 5042:80 wp_downloader
+USE_CACHE=true
+CACHE_TYPE=redis
+REDIS_CONNECTION_URL=redis://username:password@host:port
